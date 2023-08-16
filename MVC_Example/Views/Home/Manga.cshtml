@@ -1,0 +1,27 @@
+﻿<!--Razor ViewEngine-->
+@model List<MVC_Example.Models.Mangas>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Writer</th>
+            <th>NumberPrints</th>
+            <th>PublicationLanguage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var manga in Model)
+        {
+            <tr>
+                <td>@manga.Id</td>
+                <td>@manga.Name</td>
+                <td>@manga.Writer</td>
+                <td>@manga.NumberPrints</td>
+                <td>@manga.PublicationLanguage</td>
+            </tr>
+        }
+    </tbody>
+</table>

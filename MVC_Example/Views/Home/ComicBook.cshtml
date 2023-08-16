@@ -1,0 +1,27 @@
+﻿<!--Razor ViewEngine-->
+@model List<MVC_Example.Models.ComicBooks>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Writer</th>
+            <th>NumberPrints</th>
+            <th>PublicationLanguage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comicbooks in Model)
+        {
+            <tr>
+                <td>@comicbooks.Id</td>
+                <td>@comicbooks.Name</td>
+                <td>@comicbooks.Writer</td>
+                <td>@comicbooks.NumberPrints</td>
+                <td>@comicbooks.PublicationLanguage</td>
+            </tr>
+        }
+    </tbody>
+</table>
